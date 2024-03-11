@@ -13,6 +13,33 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+ 
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+ 
+}
+ 
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #d3135a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
 .btn-outline {
     background-color: transparent;
 }
@@ -20,6 +47,7 @@ body {
 .btn:hover {
     transform: scale(.95)
 }
+/* ------ Text color ---------- */
 
 .bg-primary, .btn-primary {
     background-color: var(--primary-color);
@@ -33,7 +61,7 @@ body {
 
 .bg-light, .btn-light {
     background-color: var(--light-color);
-    color: #fff;
+    
 }
 
 .bg-dark, .btn-dark {
@@ -41,7 +69,7 @@ body {
     color: #fff;
 }
 
-.bg-primary a, .btn-primary a, .bg-secondary a, .btn-secodary a, .bg-light a, .btn-light a, .bg-dark a, .btn-dark a {
+.bg-primary a, .btn-primary a, .bg-secondary a, .btn-secodary a, .bg-dark a, .btn-dark a {
     color: #fff;
 }
 
@@ -61,7 +89,25 @@ body {
     color: var(--dark-color)
 }
 
-/* ------ Text ---------- */
+/*---------- text-size ------------*/
+
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+.md {
+    font-size: 2rem;
+}
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
 .text-center {
     text-align: center;
 }
