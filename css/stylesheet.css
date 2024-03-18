@@ -6,6 +6,8 @@
     --secondary-color: #21b573;
     --dark-color: #b0144d;
     --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
 }
 
 * {
@@ -13,6 +15,7 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
@@ -39,6 +42,12 @@ p {
 
 img {
     width: 100%;
+}
+/*--------Docs Page---------*/
+code, pre {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
 }
 /* Navbar */
  
@@ -90,6 +99,10 @@ img {
     gap: 30px;
  
 }
+
+.hero-text {
+    animation: slideInFromLeft 1s ease-in;
+}
  
 .hero-form {
     position: relative;
@@ -98,6 +111,7 @@ img {
     width: 400px;
     padding: 40px;
     z-index: 100;
+    animation: slideInFromRight 1s ease-in;
  
 }
  
@@ -136,12 +150,12 @@ img {
     padding-top: 140px;
     max-width: 70%;
     margin: auto;
+    animation: slideInFromTop 1s ease-in;
 }
  
 .stats-heading {
     font-size: 1.5rem;
     text-align: center;
-    padding: 0px 80px;
 }
 
 
@@ -242,11 +256,70 @@ img {
     grid-column: 1 / span 3;
 }
 
+/*----------Docs--------*/
+
+.docs-main h3 {
+    margin: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
 
 /* ----- Footer ----------*/
 
 .footer .social {
     margin: 0 10px;
+}
+
+/*------- Animations ----------*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* ---------- Tablet -----------*/
@@ -267,11 +340,14 @@ img {
 
     .hero-text {
         margin: 40px;
+        animation: slideInFromBottom 1s ease-in;
     }
 
     .hero-form {
         justify-self: center;
+        animation: slideInFromTop 1s ease-in;
     }
+
 
     .cli .grid> *:first-child {
         grid-column: 1;
@@ -291,10 +367,11 @@ img {
     }
 
     .features-sub-head, .features-head, .docs-head {
+        justify-content: center;
         text-align: center;
     }
 
-    .features-head img, .docs-head img {
+    .features-head img, .features-sub-head img, .docs-head img {
         justify-self: center;
     }
 }
