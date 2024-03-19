@@ -256,6 +256,10 @@ code, pre {
     grid-column: 1 / span 3;
 }
 
+.hidden {
+    visibility: hidden;
+    height: 0px;
+}
 /*----------Docs--------*/
 
 .docs-main h3 {
